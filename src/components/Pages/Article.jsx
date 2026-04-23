@@ -3,11 +3,45 @@ import { useNavigate } from 'react-router-dom'
 import { useTranslation } from '../../hooks/useTranslation'
 import { articlesData } from '../Data/articleData'
 
+const SITE_URL = (import.meta.env.VITE_SITE_URL || 'https://www.watphnompehntmei.org').replace(/\/$/, '')
+
 const Article = () => {
     const navigate = useNavigate()
     const { language } = useTranslation()
     const [searchTerm, setSearchTerm] = useState('')
     const [selectedCategory, setSelectedCategory] = useState('all')
+    const [copiedArticleId, setCopiedArticleId] = useState(null)
+
+    const getArticleUrl = (articleId) => `${SITE_URL}/article/${articleId}`
+
+    const handleShareArticle = async (event, article) => {
+        event.stopPropagation()
+
+        const shareTitle = language === 'en' ? article.title : article.titleKm
+        const shareText = language === 'en' ? article.excerpt : article.excerptKm
+        const articleUrl = getArticleUrl(article.id)
+
+        if (navigator.share) {
+            try {
+                await navigator.share({
+                    title: shareTitle,
+                    text: shareText,
+                    url: articleUrl,
+                })
+                return
+            } catch {
+                // User may cancel the share dialog.
+            }
+        }
+
+        try {
+            await navigator.clipboard.writeText(articleUrl)
+            setCopiedArticleId(article.id)
+            setTimeout(() => setCopiedArticleId(null), 2000)
+        } catch {
+            setCopiedArticleId(null)
+        }
+    }
 
     // Get unique categories
     const categories = ['all', ...new Set(articlesData.map(article => article.category))]
@@ -95,10 +129,24 @@ const Article = () => {
                                     <span className="text-xs text-base-content/60">
                                         {language === 'en' ? article.author : article.authorKm}
                                     </span>
-                                    <button className="btn btn-primary btn-sm">
+                                    <button
+                                        className="btn btn-primary btn-sm"
+                                        onClick={(event) => {
+                                            event.stopPropagation()
+                                            navigate(`/article/${article.id}`)
+                                        }}
+                                    >
                                         {language === 'en' ? 'Read More' : 'អានបន្ថែម'}
                                     </button>
                                 </div>
+                                <button
+                                    className="btn btn-outline btn-sm w-full mt-2"
+                                    onClick={(event) => handleShareArticle(event, article)}
+                                >
+                                    {copiedArticleId === article.id
+                                        ? (language === 'en' ? 'Link Copied!' : 'បានចម្លងតំណ!')
+                                        : (language === 'en' ? 'Share' : 'ចែករំលែក')}
+                                </button>
                             </div>
                         </div>
                     ))}

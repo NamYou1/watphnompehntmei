@@ -1,8 +1,9 @@
-import React, { Children, useState } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "../../../hooks/useTranslation.js";
 import { initialData } from "../../Data/data.js";
 
+const SITE_URL = (import.meta.env.VITE_SITE_URL || "https://www.watphnompehntmei.org").replace(/\/$/, "");
 
 const Activities = () => {
 
@@ -14,6 +15,14 @@ const Activities = () => {
 
     const handleCardClick = (id) => {
         navigate(`/Activities/${id}`);
+    };
+
+    const handleFacebookShare = (event, id, title, titleKm) => {
+        event.stopPropagation();
+        const shareUrl = encodeURIComponent(`${SITE_URL}/Activities/${id}`);
+        const quote = encodeURIComponent(language === 'en' ? title : titleKm);
+        const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}&quote=${quote}`;
+        window.open(facebookUrl, "_blank", "noopener,noreferrer,width=700,height=600");
     };
 
     // Get unique years for filter
@@ -111,6 +120,14 @@ const Activities = () => {
                                 <p className="text-sm text-gray-500">
                                     {language === 'en' ? description : descriptionKm}
                                 </p>
+                                <div className="card-actions justify-end mt-3">
+                                    <button
+                                        className="btn btn-primary btn-sm"
+                                        onClick={(event) => handleFacebookShare(event, id, title, titleKm)}
+                                    >
+                                        {language === 'en' ? 'Share on Facebook' : 'ចែករំលែកទៅ Facebook'}
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     ))
