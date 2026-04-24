@@ -13,7 +13,8 @@ import Bunny from "./Bunny.JPG";
 import YuYiHak from './YuYiHak.JPG';
 import YanBunThoeun from './YanBunThoeun.jpg';
 import Phally from './Phally.jpg';
-// import  SoundKong from './SoundKong.jpg';
+import manut from "./manot.jpg";
+import seangMey from "./seangmey.jpg";
 export {
     ArtSengorn,
     DenSann,
@@ -26,7 +27,8 @@ export {
     Mengtong,
     Bunny,
     YuYiHak,
-    YanBunThoeun
-    , Phally,
-    // SoundKong
+    YanBunThoeun,
+    Phally,
+    manut,
+    seangMey
 };

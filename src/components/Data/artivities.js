@@ -5,8 +5,7 @@ import { MeakBocheaMain, MeakBocheaPhoto } from "../../assets/MeakBochea/index.j
 import { AlmsbowlMeakBocheaMain, AlmsbowlMeakBocheaPhoto } from "../../assets/AlmsbowlMeakBochea/index.js";
 import { KathenMain, kathen24Photo } from "../../assets/kathen24/index.js";
 import { SamakSilverFlowerFestivalMain, SamakSilverFlowerFestivalPhoto } from "../../assets/SamakSilverFlowerFestiva2025/index.js";
-// import { Children } from "react";
-
+import { charity, charityMain } from "../../assets/charity/index.js";
 export const initialData = [
     {
         id: 1,
@@ -74,18 +73,24 @@ export const initialData = [
             image: img
         }))
     },
-    // {
-    //     id: 5,
-    //     title: "Cambodian New Year",
-    //     titleKm: "ចូលឆ្នាំខ្មែរ",
-    //     description:
-    //         ``,
-    //     descriptionKm:
-    //         ``,
-    //     imgUrl: KathinaMain,
-    //     vdourl: "https://www.facebook.com/share/v/17SAmw2aMU/",
-    //     year: 2025,
-    // },
+    {
+        id: 5,
+        title: "Charity",
+        titleKm: "សប្បុរសធម៌",
+        description:
+            `The best charity is to keep the mind pure. 150 alms for grandparents
+              Friday, 8th day of the month of Visakha, year of the Monkey, Buddhist Era 2569, corresponding to April 24, 2026.`,
+        descriptionKm:
+            `ធ្វើទានដែលប្រសើរបំផុត គឺរក្សាចិត្តឲ្យស្អាតបរិសុទ្ធ ទេយ្យទានសម្រាប់តា យាយ ចំនួន១៥០
+            ថ្ងៃសុក្រ ៨កើត ខែពិសាខ ឆ្នាំមមី អដ្ឋស័ក ពុទ្ធសករាជ ២៥៦៩ ត្រូវនឹងថ្ងៃទី២៤ ខែមេសា ឆ្នាំ២០២៦។`,
+        imgUrl: charityMain,
+        vdourl: "https://www.facebook.com/reel/950014307651801",
+        year: 2026,
+        Children: charity.map((img, index) => ({
+            id: index + 1,
+            image: img
+        }))
+    },
     // {
     //     id: 6,
     //     title: "Pchum Ben",

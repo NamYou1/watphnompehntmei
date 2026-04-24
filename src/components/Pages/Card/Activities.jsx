@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "../../../hooks/useTranslation.js";
-import { initialData } from "../../Data/data.js";
+import { initialData } from "../../Data/artivities.js";
 
 const SITE_URL = (import.meta.env.VITE_SITE_URL || "https://www.watphnompehntmei.org").replace(/\/$/, "");
 

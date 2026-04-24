@@ -1,4 +1,4 @@
-import { YanBunThoeun, Bunny, Mengtong, NamYou, KhyChhaiya, Sokleng, DenSann, TolSokmean, ArtSengorn, PhalPhai, Phally, YuYiHak } from "../../assets/Monks/index.js";
+import { YanBunThoeun, Bunny, Mengtong, NamYou, KhyChhaiya, Sokleng, DenSann, TolSokmean, ArtSengorn, PhalPhai, Phally, YuYiHak  , seangMey , manut} from "../../assets/Monks/index.js";
 
 export const dataMonks = [
     {
@@ -157,17 +157,29 @@ export const dataMonks = [
         bio: 'Samner Khy Chaiya is studying at the National Technical Training Institute, majoring in civil engineering.',
         bioKm: 'សាមណេរ ឃី ឆៃយ៉ា កំពុងសិក្សានៅសកលវិទ្យាល័យ National Technical Training Institute មុខជំនាញ សំណង់ស៊ីវិល',
     },
-    // {
-    //     id: 13,
-    //     // parentId: 10,
-    //     name: 'Ly manoth',
-    //     nameKm: 'សាមណេរ លី ម៉ាណ',
-    //     title: 'Samner',
-    //     titleKm: 'សាមណេរ',
-    //     imgUrl: KhyChhaiya,
-    //     joinYear: 2023,
-    //     leftYear: null,
-    //     bio: 'Samner Khy Chaiya is studying at the National Technical Training Institute, majoring in civil engineering.',
-    //     bioKm: 'សាមណេរ ឃី ឆៃយ៉ា កំពុងសិក្សានៅសកលវិទ្យាល័យ National Technical Training Institute មុខជំនាញ សំណង់ស៊ីវិល',
-    // },
+     {
+        id: 14,
+        name: 'Lee Manut',
+        nameKm: 'សាមណេរ លី ម៉ានុត',
+        title: 'Samner',
+        titleKm: 'សាមណេរ',
+        imgUrl: manut,
+        joinYear: 2025,
+        leftYear: null,
+        bio: '',
+        bioKm: '',
+    },
+    {
+        id: 13,
+        name: 'Hong SeangMey',
+        nameKm: 'សាមណេរ ហុង សៀងមុី',
+        title: 'Samner',
+        titleKm: 'សាមណេរ',
+        imgUrl: seangMey,
+        joinYear: 2026,
+        leftYear: null,
+        bio: '',
+        bioKm: '',
+    },
+   
 ];

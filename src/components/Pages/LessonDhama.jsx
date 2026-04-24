@@ -1,7 +1,7 @@
 import React, { Children, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "../../hooks/useTranslation";
-import { initialData } from "../Data/data.js";
+import { initialData } from "../Data/artivities.js";
 
 const LessonDhama = () => {
 

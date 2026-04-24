@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
-import { initialData } from "../../Data/data.js";
+import { initialData } from "../../Data/artivities.js";
 import { Download, ChevronLeft, ChevronRight } from "lucide-react";
 import ImageCarousel from "./ImageCarousel.jsx";
 import { useTranslation } from "../../../hooks/useTranslation.js";
