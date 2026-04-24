@@ -14,12 +14,12 @@ const Activities = () => {
     const { t, language } = useTranslation();
 
     const handleCardClick = (id) => {
-        navigate(`/Activities/${id}`);
+        navigate(`/activities/${id}`);
     };
 
     const handleFacebookShare = (event, id, title, titleKm) => {
         event.stopPropagation();
-        const shareUrl = encodeURIComponent(`${SITE_URL}/Activities/${id}`);
+        const shareUrl = encodeURIComponent(`${SITE_URL}/activities/${id}`);
         const quote = encodeURIComponent(language === 'en' ? title : titleKm);
         const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}&quote=${quote}`;
         window.open(facebookUrl, "_blank", "noopener,noreferrer,width=700,height=600");

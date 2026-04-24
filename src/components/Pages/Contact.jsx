@@ -39,7 +39,7 @@ const Contact = () => {
               </div>
               <div>
                 <h3 className="font-semibold text-lg">{t('contact.email')}</h3>
-                <a href="mailto:contact@example.com" className="link link-hover">namyou854@gamil.com</a>
+                <a href="mailto:watphnompehntmei@gmail.com" className="link link-hover">watphnompehntmei@gmail.com</a>
               </div>
             </div>
 

@@ -26,11 +26,11 @@ const routerdom = createBrowserRouter([
         element: <Purpose />,
       },
       {
-        path: "Activities",
+        path: "activities",
         element: <Activities />,
       },
       {
-        path: "Activities/:id",
+        path: "activities/:id",
         element: <ActivitiesDetail />,
       },
       {

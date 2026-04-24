@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { useTranslation } from "../hooks/useTranslation";
 
 const Footer = () => {
@@ -36,22 +37,12 @@ const Footer = () => {
               {language === 'en' ? 'Quick Links' : 'តំណភ្ជាប់'}
             </h4>
             <ul className="space-y-1 text-sm">
-              <li>
-                <a href="/" className="link link-hover">
-                  {t('nav.home')}
-                </a>
-              </li>
-              <li>
-                <a href="/about" className="link link-hover">
-                  {t('nav.about')}
-                </a>
-              </li>
-              <li>
-                <a href="/contact" className="link link-hover">
-                  {t('nav.contact')}
-                </a>
-              </li>
-
+              <li><Link to="/" className="link link-hover">{t('nav.home')}</Link></li>
+              <li><Link to="/activities" className="link link-hover">{t('nav.Activities')}</Link></li>
+              <li><Link to="/article" className="link link-hover">{t('nav.article')}</Link></li>
+              <li><Link to="/about" className="link link-hover">{t('nav.about')}</Link></li>
+              <li><Link to="/purpose" className="link link-hover">{t('nav.purpose')}</Link></li>
+              <li><Link to="/contact" className="link link-hover">{t('nav.contact')}</Link></li>
             </ul>
           </div>
 
@@ -68,7 +59,7 @@ const Footer = () => {
             </p>
             <p className="text-sm">
               {language === 'en' ? 'Email' : 'អ៊ីមែល'}: {" "}
-              <a href="watphnompehntmei@gmail.com" className="link">
+              <a href="mailto:watphnompehntmei@gmail.com" className="link">
                 watphnompehntmei@gmail.com
               </a>
             </p>
@@ -100,14 +91,19 @@ const Footer = () => {
                 className="btn btn-circle btn-outline btn-sm md:btn-md hover:bg-primary hover:border-primary"
                 title="Facebook"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
+                </svg>
+              </a>
+              <a
+                href="https://www.youtube.com/@watphnompehntmei"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-circle btn-outline btn-sm md:btn-md hover:bg-red-600 hover:border-red-600"
+                title="YouTube"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-2.47 12.35 12.35 0 0 0-8.45 0A4.83 4.83 0 0 1 3.6 6.69 46.39 46.39 0 0 0 3 12a46.39 46.39 0 0 0 .6 5.31 4.83 4.83 0 0 1 3.77 2.47 12.35 12.35 0 0 0 8.45 0 4.83 4.83 0 0 1 3.77-2.47A46.39 46.39 0 0 0 21 12a46.39 46.39 0 0 0-.41-5.31zM10 15V9l5 3-5 3z"/>
                 </svg>
               </a>
             </div>

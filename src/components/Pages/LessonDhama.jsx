@@ -12,7 +12,7 @@ const LessonDhama = () => {
     const { t, language } = useTranslation();
 
     const handleCardClick = (id) => {
-        navigate(`/Activities/${id}`);
+        navigate(`/activities/${id}`);
     };
 
     // Get unique years for filter

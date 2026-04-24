@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "../hooks/useTranslation";
 import LanguageToggle from "../components/LanguageToggle";
@@ -6,6 +6,13 @@ import ThemeToggle from "../components/ThemeToggle";
 import logo from "../assets/General/Logo.jpg";
 const Navbar = () => {
   const { t } = useTranslation();
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 12);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   const links = [
     {
@@ -36,7 +43,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="navbar bg-base-100 shadow-sm px-10 items-center sticky top-0 left-0 right-0 z-50  backdrop-blur-md"  >
+    <div className={`navbar bg-base-100/90 px-10 items-center sticky top-0 left-0 right-0 z-50 backdrop-blur-md transition-all duration-300 ${scrolled ? 'shadow-md border-b border-base-200' : 'shadow-sm'}`}>
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
