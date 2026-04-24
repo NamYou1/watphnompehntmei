@@ -1,5 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { LanguageProvider } from "./context/LanguageContext";
+import { ThemeProvider } from "./context/ThemeContext";
 import RootLayout from "./Layout/RootLayout";
 import { Home, About, Contact, Activities, Purpose, ErrorPage, ActivitiesDetail, LessonDhama, Article, ArticleDetail } from "./components/Pages";
 const routerdom = createBrowserRouter([
@@ -54,9 +55,11 @@ const routerdom = createBrowserRouter([
 ]);
 const App = () => {
   return (
-    <LanguageProvider>
-      <RouterProvider router={routerdom} />
-    </LanguageProvider>
+    <ThemeProvider>
+      <LanguageProvider>
+        <RouterProvider router={routerdom} />
+      </LanguageProvider>
+    </ThemeProvider>
   );
 };
 export default App;

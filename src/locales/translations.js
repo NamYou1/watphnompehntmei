@@ -86,6 +86,9 @@ const translations = {
       moreActivities: "More Activities",
       backButton: "Back",
     },
+    activities: {
+      searchPlaceholder: "Search activities...",
+    },
     founder: {
       name: "Yu YiHak",
       title: "Leader of the construction of the Wat Phnom Penh Tmei",

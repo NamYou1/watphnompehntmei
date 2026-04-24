@@ -6,13 +6,12 @@ import Scroll from "../components/Scroll";
 
 const RootLayout = () => {
   return (
-    // <div></div>
-    <>
+    <div className="min-h-screen bg-base-100 text-base-content transition-colors duration-300">
       <Scroll />
       <Navbar />
       <Outlet />
       <Footer />
-    </>
+    </div>
   );
 };
 

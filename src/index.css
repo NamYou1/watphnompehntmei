@@ -6,6 +6,69 @@
 
 body {
   font-family: "Roboto", "Noto Sans Khmer", sans-serif;
+  background-color: oklch(var(--b1));
+  color: oklch(var(--bc));
+  transition: background-color 220ms ease, color 220ms ease;
+}
+
+a {
+  color: inherit;
+}
+
+[data-theme="dark"] .bg-white {
+  background-color: oklch(27% 0.01 255) !important;
+}
+
+[data-theme="dark"] .bg-white\/80 {
+  background-color: rgb(31 41 55 / 0.8) !important;
+}
+
+[data-theme="dark"] .bg-white\/90 {
+  background-color: rgb(31 41 55 / 0.9) !important;
+}
+
+[data-theme="dark"] .text-black {
+  color: rgb(243 244 246) !important;
+}
+
+[data-theme="dark"] .text-gray-900 {
+  color: rgb(243 244 246) !important;
+}
+
+[data-theme="dark"] .text-gray-800 {
+  color: rgb(229 231 235) !important;
+}
+
+[data-theme="dark"] .text-gray-700 {
+  color: rgb(209 213 219) !important;
+}
+
+[data-theme="dark"] .text-gray-600 {
+  color: rgb(156 163 175) !important;
+}
+
+[data-theme="dark"] .text-gray-500 {
+  color: rgb(156 163 175) !important;
+}
+
+[data-theme="dark"] .bg-gray-100 {
+  background-color: rgb(55 65 81) !important;
+}
+
+[data-theme="dark"] .bg-gray-200 {
+  background-color: rgb(75 85 99) !important;
+}
+
+[data-theme="dark"] .bg-gray-300 {
+  background-color: rgb(107 114 128) !important;
+}
+
+[data-theme="dark"] .bg-gray-400 {
+  background-color: rgb(156 163 175) !important;
+}
+
+[data-theme="dark"] .border-gray-300 {
+  border-color: rgb(107 114 128) !important;
 }
 
 /* Animations */

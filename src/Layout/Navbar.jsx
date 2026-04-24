@@ -2,6 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "../hooks/useTranslation";
 import LanguageToggle from "../components/LanguageToggle";
+import ThemeToggle from "../components/ThemeToggle";
 import logo from "../assets/General/Logo.jpg";
 const Navbar = () => {
   const { t } = useTranslation();
@@ -99,6 +100,7 @@ const Navbar = () => {
       </div>
 
       <div className="navbar-end gap-4">
+        <ThemeToggle />
         <LanguageToggle />
       </div>
     </div>
