@@ -15,6 +15,7 @@ import YanBunThoeun from './YanBunThoeun.jpg';
 import Phally from './Phally.jpg';
 import manut from "./manot.jpg";
 import seangMey from "./seangmey.jpg";
+import bunThim from "./bunthim.jpg";
 export {
     ArtSengorn,
     DenSann,
@@ -30,5 +31,6 @@ export {
     YanBunThoeun,
     Phally,
     manut,
-    seangMey
+    seangMey,
+    bunThim
 };

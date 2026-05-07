@@ -1,4 +1,4 @@
-import { YanBunThoeun, Bunny, Mengtong, NamYou, KhyChhaiya, Sokleng, DenSann, TolSokmean, ArtSengorn, PhalPhai, Phally, YuYiHak  , seangMey , manut} from "../../assets/Monks/index.js";
+import { YanBunThoeun, Bunny, Mengtong, NamYou, KhyChhaiya, Sokleng, DenSann, TolSokmean, ArtSengorn, PhalPhai, Phally, YuYiHak  , seangMey , manut, bunThim} from "../../assets/Monks/index.js";
 
 export const dataMonks = [
     {
@@ -50,6 +50,19 @@ export const dataMonks = [
         imgUrl: Phally,
         joinYear: 2018,
         leftYear: 2019,
+        bio: '',
+        bioKm: '',
+    },
+    {
+        id: 4,
+        // parentId: 1,
+        name: 'Thos Bunthim',
+        nameKm: 'ភិក្ខុសិរីបាលោ ថុស ប៊ុនធីម',
+        title: 'Bhikkhu',
+        titleKm: 'ភិក្ខុ',
+        imgUrl: bunThim,
+        joinYear: 2021,
+        leftYear: 2022,
         bio: '',
         bioKm: '',
     },

@@ -44,6 +44,9 @@ const Activities = () => {
         return matchesSearch && matchesYear;
     });
 
+    // Sort filtered data by year in descending order
+    filteredData.sort((a, b) => b.year - a.year);
+
     // If "All Years" selected, show only one card per unique title (most recent)
     if (selectedYear === "all") {
         const uniqueTitles = new Map();
@@ -149,4 +152,3 @@ const Activities = () => {
 
 export default Activities
 // 
-

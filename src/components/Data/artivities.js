@@ -6,6 +6,8 @@ import { AlmsbowlMeakBocheaMain, AlmsbowlMeakBocheaPhoto } from "../../assets/Al
 import { KathenMain, kathen24Photo } from "../../assets/kathen24/index.js";
 import { SamakSilverFlowerFestivalMain, SamakSilverFlowerFestivalPhoto } from "../../assets/SamakSilverFlowerFestiva2025/index.js";
 import { charity, charityMain } from "../../assets/charity/index.js";
+import { visak2026Images } from "../../assets/visak2026/index.js";
+import {salabon2013Images} from "../../assets/salabon2013/index.js";
 export const initialData = [
     {
         id: 1,
@@ -154,6 +156,39 @@ export const initialData = [
         vdourl: "",
         year: 2025,
         Children: SamakSilverFlowerFestivalPhoto.map((img, index) => ({
+            id: index + 1,
+            image: img
+        }))
+    },
+
+    {
+        id: 10,
+        title: "Visak Bochea Festival 2026",
+        titleKm: "ពិធី​បុណ្យ​វិសាខ​បូជា ២០២៦",
+        description:
+            `Sunday, May 31, 2026 which in Lunar is day of 15 Koeut, month of Vesak, year of Horse, Buddhist era 2570.`,
+        descriptionKm:
+            `ថ្ងៃអាទិត្យ ១៥កើត ខែពិសាខ ឆ្នាំឆ្លូវ ពុទ្ធសករាជ ២៥៧០ ត្រូវនឹងថ្ងៃទី៣១ ខែឧសភា ឆ្នាំ២០២៦ ។`,
+        imgUrl: visak2026Images[0],
+        vdourl: "",
+        year: 2026,
+        Children: visak2026Images.map((img, index) => ({
+            id: index + 1,
+            image: img
+        }))
+    },
+    {
+        id: 11,
+        title: "Salabon Phnom Pehn Tmei on 2013",
+        titleKm: "សាលាបុណ្យភ្នំពេញថ្មី នៅក្នុងឆ្នាំ២០១៣",
+        description:
+            ``,
+        descriptionKm:
+            ``,
+        imgUrl: salabon2013Images[0],
+        vdourl: "",
+        year: 2026,
+        Children: salabon2013Images.map((img, index) => ({
             id: index + 1,
             image: img
         }))

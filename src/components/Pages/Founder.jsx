@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useTranslation } from '../../hooks/useTranslation'
-import { Facebook, Mail, Phone, Youtube } from 'lucide-react';
+// import { Facebook, Mail, Phone, Youtube } from 'lucide-react';
 import MasterHak from "../../assets/Monks/MasterHak.jpg"
 import SoundKong from "../../assets/Monks/SounKong.jpg"
 // import { SoundKong } from '../../assets/Monks';
@@ -77,13 +77,13 @@ function Founder() {
     const getIcon = (iconName) => {
         switch (iconName) {
             case 'Facebook':
-                return <Facebook />;
+                return <span style={{fontWeight: 'bold', color: '#1877f3'}}>f</span>; // Placeholder for Facebook icon
             case 'Phone':
-                return <Phone />;
+                return <span role="img" aria-label="phone">📞</span>;
             case 'Email':
-                return <Mail />;
+                return <span role="img" aria-label="email">✉️</span>;
             case 'Youtube':
-                return <Youtube />;
+                return <span style={{color: 'red', fontWeight: 'bold'}}>▶</span>; // Placeholder for Youtube icon
             default:
                 return null;
         }
